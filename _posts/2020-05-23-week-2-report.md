@@ -5,12 +5,12 @@ author: "Nitish Aggarwal"
 categories: journal
 ---
 
-Hey Guys, Welcome back to series, hope you were waiting for me because i was for you.. There is a lot for this week let's dive into the stuff then..
+Hey Guys, Welcome back to series, there is a lot for this week let's dive into the stuff then..
 
-So, i started my week with some tweaks to the already completed `User` and `authentication` API. But hey, wait life isn't so easy because tweaks aren't so easy.. Here comes `codeclimate` to give you some chills. But you know what [@tachyons](https://github.com/tachyons/) told me not to worry about some of those issues and my PR was merged.. What a relief was that :).. but but be with me `codeclimate` is not gonna leave me like this :(
+So, i started my week with some tweaks to the already completed `User` and `authentication` API. But hey, wait life isn't so easy so are the tweaks.. Here comes `codeclimate` to give you some chills. But [@tachyons](https://github.com/tachyons/) told me not to worry about some of those issues and my PR was merged.. What a relief was that :).. but but be with me `codeclimate` is not gonna leave me like this :D
 
 Ok enough talk let's talk some coding..
-I had some hands on `projects controller` that would handle all projects related stuff that includes starring, forking, sorting filtering and all.. Wanna see some code.. Here we go :)
+I had some hands on `projects controller` that would handle all projects related stuff that includes starring, forking, sorting filtering and all..
 
 ```ruby
 # GET /api/v1/projects
@@ -67,13 +67,13 @@ def sort
 end
 ```
 
-These covers the basics, let's rest others You must have some reasons to go to our [github](https://github.com/CircuitVerse/CircuitVerse) too :)
+These covers the basics, for further details make sure to checkout our [github](https://github.com/CircuitVerse/CircuitVerse).
 
 Just a side note, it feels ecstatic to see `coveralls` coverage go up in your [PR](https://github.com/CircuitVerse/CircuitVerse/pull/1431)..
 
 Let's head over to some other stuff.. Projects is done.. You might wanna form groups, add members, assignments..
 
-_"Stay calm and believe in CircuitVerse"_
+_"Keep calm and believe in CircuitVerse"_
 
 As far as groups are concerned we have `groups`, `group_members`, `assignments` controller.
 First things first, `groups_controller.rb`. We haven't talked about `selective including` yet but will have a look over that here..
@@ -113,7 +113,7 @@ def include_resource
 end
 ```
 
-You might want to add and delete members to your groups.. here comes `group_members_controller.rb`. For routing we use shallow routing here.. More details [here](https://guides.rubyonrails.org/routing.html#nested-resources)
+You might want to add and delete members to your groups..`group_members_controller.rb` to the rescue. For routing we use shallow routing here.. More details [here](https://guides.rubyonrails.org/routing.html#nested-resources)
 
 ```ruby
 # Want to add someone to your group, we've got you covered
@@ -145,7 +145,7 @@ def destroy
 end
 ```
 
-Evaluations in mind, student's life is gonna be hard but yes that's important (says an undergrad `smirks`). Ok, time for some assignments, let's leave for `assignments_controller.rb`..
+Evaluations in mind, student's life is gonna be hard but yes that's important (says an undergrad `smirks`). Assignments obviously would live in `assignments_controller.rb`..
 
 ```ruby
 # GET /api/v1/groups/:group_id/assignments
@@ -193,7 +193,7 @@ def start
 end
 ```
 
-We are here for for some interesting stuff only aren't we.. So, i am not gonna metion too mainstream stuff over here.. We need to have the `name` and `email` for the `group_members` but we don't have them directly plugged into our `group_member_model` So, how do we serialize, we've, technically [Netflix's fast jsonapi](https://github.com/Netflix/fast_jsonapi) got you covered :)
+Let's leave too mainstream stuff here & catchup on some interesting one.. We need to have the `name` and `email` for the `group_members` but we don't have them directly plugged into our `group_member_model` So, how do we serialize, we've, technically [Netflix's fast jsonapi](https://github.com/Netflix/fast_jsonapi) got you covered :)
 
 ```ruby
 class Api::V1::GroupMemberSerializer
@@ -216,15 +216,15 @@ _"So far so good"_
 
 > _"Enter Codeclimate and your life will never be same"_
 
-Hey Hey you said `codeclimate` gives you chills, Yes, i did Let's go over that. `Codeclimate` "reviewed" my PR and loved it so much that it threw "only" (sarcasm intended :P) 243 issues for me to resolve and i was flabbergasted :P
+Hey Hey you said `codeclimate` gives you chills, Yes, i did Let's go over that. `Codeclimate` "reviewed" my PR and loved it so much that it threw "only" (sarcasm intended :p) 243 issues for me to resolve and i was "flabbergasted"..
 
-Well with some refactoring and a lot of head scratching :P, i was able to boil down the issues to 37. Also, this magical command has earned a special respect in my <3 `rubocop -a /path/to/file/that/haunts/you`
+Well with some refactoring and a lot of head scratching, i was able to boil down the issues to 37. Also, this magical command has earned a special respect in my <3 `rubocop -a /path/to/file/that/haunts/you`
 
 <p align="center">
 	<img src="../assets/img/projects_api_codeclimate.png">
 </p>
 
-It's sort of becoming sad, i don't want to end my blog like this. Cheer up guys, The same PR [#1441](https://github.com/CircuitVerse/CircuitVerse/pull/1431) has got `coveralls coverage` increased by 1.07% ,Not bad huh... Devs might connect :)
+It's sort of becoming sad, Cheer up guys, The same PR [#1441](https://github.com/CircuitVerse/CircuitVerse/pull/1431) has got `coveralls coverage` increased by 1.07% ,Not bad huh... Devs might connect :)
 
 <p align="center">
 	<img src="../assets/img/increased_coverage.png">
