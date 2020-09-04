@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GSoC 2020: Second Phase Report"
+title: "GSoC 2020 : Second Phase Report"
 author: "Nitish Aggarwal"
 categories: journal
 ---
